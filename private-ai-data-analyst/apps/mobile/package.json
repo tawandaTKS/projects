@@ -1,0 +1,29 @@
+{
+  "name": "@pada/mobile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "cap:sync": "npm run build && cap sync",
+    "android": "npm run build && cap sync android && cap open android",
+    "ios": "npm run build && cap sync ios && cap open ios",
+    "patch-native": "node scripts/patch-native.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/share": "^8.0.3",
+    "@duckdb/duckdb-wasm": "^1.33.1-dev57.0",
+    "@pada/core": "1.0.0",
+    "@pada/ui": "1.0.0",
+    "hyparquet": "^1.32.0",
+    "hyparquet-compressors": "^1.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0"
+  }
+}

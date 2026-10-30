@@ -1,0 +1,37 @@
+{
+  "name": "private-ai-data-analyst",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Private AI Data Analyst: ask questions of CSV, Excel and Parquet files in plain English. Runs 100% on-device with DuckDB and Ollama.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev:desktop": "npm run dev -w apps/desktop",
+    "build:desktop": "npm run build -w apps/desktop",
+    "dist:desktop": "npm run dist -w apps/desktop",
+    "dev:mobile": "npm run dev -w apps/mobile",
+    "build:mobile": "npm run build -w apps/mobile",
+    "license:keygen": "node tools/license/keygen.mjs",
+    "license:issue": "node tools/license/issue.mjs",
+    "test:e2e:desktop": "npm run build -w apps/desktop && xvfb-run -a node tests/e2e/desktop.e2e.cjs",
+    "test:e2e:mobile": "node tests/e2e/mobile.e2e.cjs",
+    "android": "npm run android -w apps/mobile",
+    "ios": "npm run ios -w apps/mobile"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "type": "module"
+}

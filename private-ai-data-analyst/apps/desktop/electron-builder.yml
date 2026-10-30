@@ -1,0 +1,27 @@
+appId: com.privateanalyst.desktop
+productName: Private Analyst
+copyright: Copyright © 2026 Private Analyst
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - package.json
+# DuckDB ships a native N-API addon (ABI-stable, no rebuild needed for Electron); keep it outside the asar.
+asarUnpack:
+  - "**/node_modules/@duckdb/**"
+npmRebuild: false
+mac:
+  category: public.app-category.productivity
+  target: [dmg, zip]
+  hardenedRuntime: true
+win:
+  target: [nsis]
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+linux:
+  target: [AppImage, deb]
+  category: Office
+publish: null

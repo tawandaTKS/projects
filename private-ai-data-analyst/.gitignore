@@ -1,0 +1,9 @@
+node_modules/
+dist/
+release/
+apps/mobile/android/
+apps/mobile/ios/
+tools/license/.keys/
+*.duckdb
+*.duckdb.wal
+.DS_Store
