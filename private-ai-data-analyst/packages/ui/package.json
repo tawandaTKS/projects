@@ -1,0 +1,1 @@
+{"name":"@pada/ui","version":"1.0.0","private":true,"type":"module","main":"src/index.ts","types":"src/index.ts","dependencies":{"@pada/core":"1.0.0","react":"^19.3.1","react-dom":"^19.3.1","recharts":"^3.10.1"}}
